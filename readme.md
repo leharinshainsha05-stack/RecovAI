@@ -297,12 +297,5 @@ This project is open-source software licensed under the **MIT License**.
 ```
 
 ---
-
-### **Final Pre-Submission Checklist**
-1. **GitHub URL:** In the clone snippet (`git clone https://github.com/your-username/recovai.git`), replace `your-username` with your actual GitHub handle.
-2. **Live Demo Link:** If you deploy to Streamlit Cloud, add a line right at the very top under the badges:
-   ```markdown
-   **Live Demo:** [recovai.streamlit.app](https://your-app-name.streamlit.app)
-
 ```
 

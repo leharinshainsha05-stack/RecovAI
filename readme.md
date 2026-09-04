@@ -23,35 +23,35 @@ Incoming Webhook Failure
 │  Day 1: Diagnostic Engine & Failure Classifier         │
 │  Classifies 12 error codes across 4 operational blocks │
 └───────────────────────┬────────────────────────────────┘
-│
-┌────────────────┴────────────────────────┐
-▼                                         ▼
+                        │
+┌───────────────────────┴────────────────────────┐
+▼                                                ▼
 ┌──────────────────────────────┐ ┌──────────────────────────────┐
 │ Block 1: Network Auto-Retry  │ │ Block 2: Payday Cycle Retry  │
 │ Live Reroute (<200ms budget) │ │ 10:00 AM IST Salary Window   │
 └──────────────┬───────────────┘ └──────────────┬───────────────┘
-│                                │
-└────────────────┬───────────────┘
-│ (On Failure / Hard Decline)
-▼
+               │                                │
+               └────────────────┬───────────────┘
+                                │ (On Failure / Hard Decline)
+                                ▼
 ┌────────────────────────────────────────────────────────┐
 │ Block 3: Dead Instrument Suppression                   │
 │ Suppresses retries on expired cards/revoked mandates   │
 └───────────────────────┬────────────────────────────────┘
-│
-▼
+                        │
+                        ▼
 ┌────────────────────────────────────────────────────────┐
 │ Block 4: Dynamic 1-Click Fallback Links                │
 │ Razorpay UPI/Card links + LTV-tiered grace periods     │
 └───────────────────────┬────────────────────────────────┘
-│
-▼
+                        │
+                        ▼
 ┌────────────────────────────────────────────────────────┐
 │ Block 5: Compliance Guardrails & SHA-256 Ledger        │
 │ Hard 2-retry cap, 6h cooldown, DND, chained hashes     │
 └───────────────────────┬────────────────────────────────┘
-│
-▼
+                        │
+                        ▼
 ┌────────────────────────────────────────────────────────┐
 │ Block 6: Pre-Emptive Account Aggregator (Roadmap)      │
 │ Pre-flight balance check via RBI AA (T-24h window)     │

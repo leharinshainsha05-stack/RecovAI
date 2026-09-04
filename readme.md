@@ -294,8 +294,5 @@ recovai/
 
 This project is open-source software licensed under the **MIT License**.
 
-```
 
----
-```
 

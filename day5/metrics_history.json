@@ -1,0 +1,49 @@
+[
+  {
+    "timestamp": "2026-09-02T06:04:02.931980",
+    "recovery_rate": 0.74,
+    "revenue_recovery": 0.7993553284962228,
+    "net_revenue": 105019.42,
+    "total_transactions": 50,
+    "recovered_transactions": 37,
+    "by_block": {
+      "BLOCK_1": {
+        "total": 20,
+        "recovered": 19,
+        "rate": 0.95,
+        "target": 0.8,
+        "vs_target": 0.1499999999999999,
+        "score": 100.0,
+        "status": "\u2713 On Target"
+      },
+      "BLOCK_2": {
+        "total": 12,
+        "recovered": 10,
+        "rate": 0.8333333333333334,
+        "target": 0.6,
+        "vs_target": 0.2333333333333334,
+        "score": 100.0,
+        "status": "\u2713 On Target"
+      },
+      "BLOCK_3": {
+        "total": 10,
+        "recovered": 4,
+        "rate": 0.4,
+        "target": 0.25,
+        "vs_target": 0.15000000000000002,
+        "score": 100.0,
+        "status": "\u2713 On Target"
+      },
+      "BLOCK_4": {
+        "total": 8,
+        "recovered": 4,
+        "rate": 0.5,
+        "target": 0.3,
+        "vs_target": 0.2,
+        "score": 100.0,
+        "status": "\u2713 On Target"
+      }
+    },
+    "status": "PASS"
+  }
+]

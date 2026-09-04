@@ -1,0 +1,689 @@
+{
+  "timestamp": "2026-09-04T08:53:21.357833",
+  "execution_time_seconds": 0.5393369197845459,
+  "overview": {
+    "batch_size": 50,
+    "total_amount_rupees": 80351.0,
+    "recovered_amount_rupees": 77657.0
+  },
+  "key_metrics": {
+    "recovery_rate": {
+      "value": 0.92,
+      "target": 0.7,
+      "status": "\u2713 On Target"
+    },
+    "revenue_recovery_rate": {
+      "value": 0.9664721036452565,
+      "target": 0.7,
+      "status": "\u2713 On Target"
+    },
+    "net_revenue_impact": {
+      "value": 128828.86,
+      "currency": "\u20b9",
+      "roi": 32.06652312976814
+    }
+  },
+  "transaction_breakdown": {
+    "recovered": 46,
+    "failed": 0,
+    "paused": 4
+  },
+  "recovery_by_block": {
+    "BLOCK_1": {
+      "total": 23,
+      "recovered": 23,
+      "rate": 1.0,
+      "target": 0.8,
+      "vs_target": 0.19999999999999996,
+      "score": 100.0,
+      "status": "\u2713 On Target"
+    },
+    "BLOCK_2": {
+      "total": 14,
+      "recovered": 13,
+      "rate": 0.9285714285714286,
+      "target": 0.6,
+      "vs_target": 0.3285714285714286,
+      "score": 100.0,
+      "status": "\u2713 On Target"
+    },
+    "BLOCK_3": {
+      "total": 13,
+      "recovered": 13,
+      "rate": 1.0,
+      "target": 1.0,
+      "vs_target": 0.0,
+      "score": 50.0,
+      "status": "\u2713 On Target",
+      "metric_label": "Card-retry suppression on dead instruments (not payment recovery)"
+    },
+    "BLOCK_4": {
+      "total": 19,
+      "recovered": 15,
+      "rate": 0.7894736842105263,
+      "target": 0.65,
+      "vs_target": 0.1394736842105263,
+      "score": 100.0,
+      "status": "\u2713 On Target",
+      "metric_label": "Fallback-link conversion (escalated \u2192 RECOVERED_VIA_FALLBACK)"
+    }
+  },
+  "revenue_breakdown": {
+    "direct_recovered": 77657.0,
+    "processing_costs": 1553.14,
+    "churn_prevention_value": 1125.0,
+    "ltv_retention_value": 51600.0,
+    "net_revenue": 128828.86,
+    "fallback_recovered_count": 15,
+    "fallback_recovered_amount": 15791.0
+  },
+  "sample_transactions": [
+    {
+      "invoice_id": "inv_0001",
+      "customer_id": "cust_0001",
+      "amount_rupees": 152.0,
+      "error_code": "NETWORK_ERROR",
+      "payment_method": "card",
+      "segment": "TIER_1"
+    },
+    {
+      "invoice_id": "inv_0002",
+      "customer_id": "cust_0002",
+      "amount_rupees": 408.0,
+      "error_code": "GATEWAY_TIMEOUT",
+      "payment_method": "card",
+      "segment": "TIER_2"
+    },
+    {
+      "invoice_id": "inv_0003",
+      "customer_id": "cust_0003",
+      "amount_rupees": 103.0,
+      "error_code": "GATEWAY_TIMEOUT",
+      "payment_method": "upi",
+      "segment": "TIER_1"
+    },
+    {
+      "invoice_id": "inv_0004",
+      "customer_id": "cust_0004",
+      "amount_rupees": 709.0,
+      "error_code": "GATEWAY_TIMEOUT",
+      "payment_method": "card",
+      "segment": "TIER_1"
+    },
+    {
+      "invoice_id": "inv_0005",
+      "customer_id": "cust_0005",
+      "amount_rupees": 1598.0,
+      "error_code": "GATEWAY_ERROR_5XX",
+      "payment_method": "card",
+      "segment": "TIER_1"
+    },
+    {
+      "invoice_id": "inv_0006",
+      "customer_id": "cust_0006",
+      "amount_rupees": 4364.0,
+      "error_code": "GATEWAY_TIMEOUT",
+      "payment_method": "card",
+      "segment": "TIER_1"
+    },
+    {
+      "invoice_id": "inv_0007",
+      "customer_id": "cust_0007",
+      "amount_rupees": 2413.0,
+      "error_code": "GATEWAY_ERROR_5XX",
+      "payment_method": "card",
+      "segment": "TIER_1"
+    },
+    {
+      "invoice_id": "inv_0008",
+      "customer_id": "cust_0008",
+      "amount_rupees": 1937.0,
+      "error_code": "NETWORK_ERROR",
+      "payment_method": "netbanking",
+      "segment": "TIER_1"
+    },
+    {
+      "invoice_id": "inv_0009",
+      "customer_id": "cust_0009",
+      "amount_rupees": 427.0,
+      "error_code": "GATEWAY_TIMEOUT",
+      "payment_method": "card",
+      "segment": "TIER_2"
+    },
+    {
+      "invoice_id": "inv_0010",
+      "customer_id": "cust_0010",
+      "amount_rupees": 133.0,
+      "error_code": "NETWORK_ERROR",
+      "payment_method": "card",
+      "segment": "TIER_1"
+    }
+  ],
+  "top_recovered": [
+    {
+      "invoice_id": "inv_0019",
+      "amount_rupees": 9363.0,
+      "block": "BLOCK_1",
+      "via_fallback": false
+    },
+    {
+      "invoice_id": "inv_0047",
+      "amount_rupees": 6462.0,
+      "block": "BLOCK_2",
+      "via_fallback": false
+    },
+    {
+      "invoice_id": "inv_0043",
+      "amount_rupees": 6450.0,
+      "block": "BLOCK_1",
+      "via_fallback": false
+    },
+    {
+      "invoice_id": "inv_0006",
+      "amount_rupees": 4364.0,
+      "block": "BLOCK_1",
+      "via_fallback": false
+    },
+    {
+      "invoice_id": "inv_0027",
+      "amount_rupees": 4254.0,
+      "block": "BLOCK_2",
+      "via_fallback": true
+    },
+    {
+      "invoice_id": "inv_0045",
+      "amount_rupees": 3885.0,
+      "block": "BLOCK_2",
+      "via_fallback": false
+    },
+    {
+      "invoice_id": "inv_0011",
+      "amount_rupees": 3879.0,
+      "block": "BLOCK_1",
+      "via_fallback": false
+    },
+    {
+      "invoice_id": "inv_0021",
+      "amount_rupees": 3849.0,
+      "block": "BLOCK_2",
+      "via_fallback": false
+    },
+    {
+      "invoice_id": "inv_0037",
+      "amount_rupees": 3083.0,
+      "block": "BLOCK_3",
+      "via_fallback": true
+    },
+    {
+      "invoice_id": "inv_0044",
+      "amount_rupees": 3016.0,
+      "block": "BLOCK_1",
+      "via_fallback": false
+    }
+  ],
+  "compliance_metrics": {
+    "max_2_retries_respected": true,
+    "audit_chain_valid": true,
+    "invoices_checked": 50
+  },
+  "guardrails": {
+    "max_2_retries": {
+      "label": "2-retry cap per invoice",
+      "enforced": true,
+      "how": "Structural guarantee: only BLOCK_1 ever schedules a retry, and it's capped at schedule_retry_1() + schedule_retry_2() by the state machine's own TRANSITIONS map - a 3rd retry has no valid transition.",
+      "verified_against_real_run": true
+    },
+    "communication_cooldown_6h": {
+      "label": "6-hour communication cooldown",
+      "enforced": true,
+      "how": "Structural guarantee enforced by the Day 2 state machine's transition guards / Day 3 notification scheduling; not independently re-counted per invoice by this benchmark, since this run talks directly to Day2_statemachine + Day2_audit rather than the live Day3 notification path.",
+      "verified_against_real_run": false
+    },
+    "dnd_opt_out_filter": {
+      "label": "DND opt-out filter",
+      "enforced": true,
+      "how": "Structural guarantee: DND_ABORTED is a modeled terminal state and the Day 3 notification path checks opt-out status before sending; not independently re-counted per invoice by this benchmark for the same reason as the cooldown above.",
+      "verified_against_real_run": false
+    },
+    "audit_chain_integrity": {
+      "label": "SHA-256 audit hash chain",
+      "enforced": true,
+      "how": "Recomputed and verified per invoice this run via AuditLedger.verify_chain_integrity() over the real hash-chained log.",
+      "verified_against_real_run": true
+    }
+  },
+  "audit_ledger_sample": [
+    {
+      "trace_id": "evt_7bca5b343b77",
+      "invoice_id": "inv_0001",
+      "error_code": "\u2014",
+      "action_taken": "WEBHOOK_RECEIVED",
+      "state_transition": "\u2192 GATEWAY_FAILURE",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.811677"
+    },
+    {
+      "trace_id": "evt_8a26fd4cc815",
+      "invoice_id": "inv_0001",
+      "error_code": "\u2014",
+      "action_taken": "DIAGNOSED",
+      "state_transition": "\u2192 GATEWAY_FAILURE",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.826512"
+    },
+    {
+      "trace_id": "evt_7a921c462723",
+      "invoice_id": "inv_0001",
+      "error_code": "\u2014",
+      "action_taken": "RECOVERED",
+      "state_transition": "\u2192 RECOVERED",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.839635"
+    },
+    {
+      "trace_id": "evt_8c8122359675",
+      "invoice_id": "inv_0002",
+      "error_code": "\u2014",
+      "action_taken": "WEBHOOK_RECEIVED",
+      "state_transition": "\u2192 GATEWAY_FAILURE",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.845721"
+    },
+    {
+      "trace_id": "evt_1112a6340375",
+      "invoice_id": "inv_0002",
+      "error_code": "\u2014",
+      "action_taken": "DIAGNOSED",
+      "state_transition": "\u2192 GATEWAY_FAILURE",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.847736"
+    },
+    {
+      "trace_id": "evt_e31a407bcd0c",
+      "invoice_id": "inv_0002",
+      "error_code": "\u2014",
+      "action_taken": "RECOVERED",
+      "state_transition": "\u2192 RECOVERED",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.851272"
+    },
+    {
+      "trace_id": "evt_9a51ba8b8dda",
+      "invoice_id": "inv_0003",
+      "error_code": "\u2014",
+      "action_taken": "WEBHOOK_RECEIVED",
+      "state_transition": "\u2192 GATEWAY_FAILURE",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.851272"
+    },
+    {
+      "trace_id": "evt_c8098f0dc891",
+      "invoice_id": "inv_0003",
+      "error_code": "\u2014",
+      "action_taken": "DIAGNOSED",
+      "state_transition": "\u2192 GATEWAY_FAILURE",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.855718"
+    },
+    {
+      "trace_id": "evt_a2356da461cb",
+      "invoice_id": "inv_0003",
+      "error_code": "\u2014",
+      "action_taken": "RECOVERED",
+      "state_transition": "\u2192 RECOVERED",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.857736"
+    },
+    {
+      "trace_id": "evt_de0bab2e65f6",
+      "invoice_id": "inv_0004",
+      "error_code": "\u2014",
+      "action_taken": "WEBHOOK_RECEIVED",
+      "state_transition": "\u2192 GATEWAY_FAILURE",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.863754"
+    },
+    {
+      "trace_id": "evt_4dd0548c337e",
+      "invoice_id": "inv_0004",
+      "error_code": "\u2014",
+      "action_taken": "DIAGNOSED",
+      "state_transition": "\u2192 GATEWAY_FAILURE",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.867280"
+    },
+    {
+      "trace_id": "evt_fac4b15c6643",
+      "invoice_id": "inv_0004",
+      "error_code": "\u2014",
+      "action_taken": "RECOVERED",
+      "state_transition": "\u2192 RECOVERED",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.869292"
+    },
+    {
+      "trace_id": "evt_4f863beffedf",
+      "invoice_id": "inv_0005",
+      "error_code": "\u2014",
+      "action_taken": "WEBHOOK_RECEIVED",
+      "state_transition": "\u2192 GATEWAY_FAILURE",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.869292"
+    },
+    {
+      "trace_id": "evt_591513e97121",
+      "invoice_id": "inv_0005",
+      "error_code": "\u2014",
+      "action_taken": "DIAGNOSED",
+      "state_transition": "\u2192 GATEWAY_FAILURE",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.869292"
+    },
+    {
+      "trace_id": "evt_afb7303b9cde",
+      "invoice_id": "inv_0005",
+      "error_code": "\u2014",
+      "action_taken": "RECOVERED",
+      "state_transition": "\u2192 RECOVERED",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.874411"
+    },
+    {
+      "trace_id": "evt_3cac0d758985",
+      "invoice_id": "inv_0006",
+      "error_code": "\u2014",
+      "action_taken": "WEBHOOK_RECEIVED",
+      "state_transition": "\u2192 GATEWAY_FAILURE",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.874411"
+    },
+    {
+      "trace_id": "evt_04565e29a945",
+      "invoice_id": "inv_0006",
+      "error_code": "\u2014",
+      "action_taken": "DIAGNOSED",
+      "state_transition": "\u2192 GATEWAY_FAILURE",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.874411"
+    },
+    {
+      "trace_id": "evt_a39e5542c555",
+      "invoice_id": "inv_0006",
+      "error_code": "\u2014",
+      "action_taken": "RECOVERED",
+      "state_transition": "\u2192 RECOVERED",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.883234"
+    },
+    {
+      "trace_id": "evt_1c1bc7456b2f",
+      "invoice_id": "inv_0007",
+      "error_code": "\u2014",
+      "action_taken": "WEBHOOK_RECEIVED",
+      "state_transition": "\u2192 GATEWAY_FAILURE",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.883234"
+    },
+    {
+      "trace_id": "evt_8d0ab2164a7a",
+      "invoice_id": "inv_0007",
+      "error_code": "\u2014",
+      "action_taken": "DIAGNOSED",
+      "state_transition": "\u2192 GATEWAY_FAILURE",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.883234"
+    },
+    {
+      "trace_id": "evt_cb58b3bc5ffb",
+      "invoice_id": "inv_0007",
+      "error_code": "\u2014",
+      "action_taken": "RECOVERED",
+      "state_transition": "\u2192 RECOVERED",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.891065"
+    },
+    {
+      "trace_id": "evt_d53577064dd8",
+      "invoice_id": "inv_0008",
+      "error_code": "\u2014",
+      "action_taken": "WEBHOOK_RECEIVED",
+      "state_transition": "\u2192 GATEWAY_FAILURE",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.891065"
+    },
+    {
+      "trace_id": "evt_6ab38e17a7f9",
+      "invoice_id": "inv_0008",
+      "error_code": "\u2014",
+      "action_taken": "DIAGNOSED",
+      "state_transition": "\u2192 GATEWAY_FAILURE",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.891065"
+    },
+    {
+      "trace_id": "evt_c911e8c30475",
+      "invoice_id": "inv_0008",
+      "error_code": "\u2014",
+      "action_taken": "RECOVERED",
+      "state_transition": "\u2192 RECOVERED",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.891065"
+    },
+    {
+      "trace_id": "evt_fa1a645a04a9",
+      "invoice_id": "inv_0009",
+      "error_code": "\u2014",
+      "action_taken": "WEBHOOK_RECEIVED",
+      "state_transition": "\u2192 GATEWAY_FAILURE",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.891065"
+    },
+    {
+      "trace_id": "evt_130dabb431a8",
+      "invoice_id": "inv_0009",
+      "error_code": "\u2014",
+      "action_taken": "DIAGNOSED",
+      "state_transition": "\u2192 GATEWAY_FAILURE",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.891065"
+    },
+    {
+      "trace_id": "evt_0e1a365c12a5",
+      "invoice_id": "inv_0009",
+      "error_code": "\u2014",
+      "action_taken": "RECOVERED",
+      "state_transition": "\u2192 RECOVERED",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.907796"
+    },
+    {
+      "trace_id": "evt_e2dbb43d2e3a",
+      "invoice_id": "inv_0010",
+      "error_code": "\u2014",
+      "action_taken": "WEBHOOK_RECEIVED",
+      "state_transition": "\u2192 GATEWAY_FAILURE",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.907796"
+    },
+    {
+      "trace_id": "evt_33a749e46c96",
+      "invoice_id": "inv_0010",
+      "error_code": "\u2014",
+      "action_taken": "DIAGNOSED",
+      "state_transition": "\u2192 GATEWAY_FAILURE",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.907796"
+    },
+    {
+      "trace_id": "evt_19636f6dd990",
+      "invoice_id": "inv_0010",
+      "error_code": "\u2014",
+      "action_taken": "RECOVERED",
+      "state_transition": "\u2192 RECOVERED",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.907796"
+    },
+    {
+      "trace_id": "evt_9131b049cc8e",
+      "invoice_id": "inv_0011",
+      "error_code": "\u2014",
+      "action_taken": "WEBHOOK_RECEIVED",
+      "state_transition": "\u2192 GATEWAY_FAILURE",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.918570"
+    },
+    {
+      "trace_id": "evt_f87005a6cda0",
+      "invoice_id": "inv_0011",
+      "error_code": "\u2014",
+      "action_taken": "DIAGNOSED",
+      "state_transition": "\u2192 GATEWAY_FAILURE",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.918570"
+    },
+    {
+      "trace_id": "evt_45dee95a6f72",
+      "invoice_id": "inv_0011",
+      "error_code": "\u2014",
+      "action_taken": "RECOVERED",
+      "state_transition": "\u2192 RECOVERED",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.921972"
+    },
+    {
+      "trace_id": "evt_c92ff9bc5700",
+      "invoice_id": "inv_0012",
+      "error_code": "\u2014",
+      "action_taken": "WEBHOOK_RECEIVED",
+      "state_transition": "\u2192 GATEWAY_FAILURE",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.924782"
+    },
+    {
+      "trace_id": "evt_46d9bca1235c",
+      "invoice_id": "inv_0012",
+      "error_code": "\u2014",
+      "action_taken": "DIAGNOSED",
+      "state_transition": "\u2192 GATEWAY_FAILURE",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.924782"
+    },
+    {
+      "trace_id": "evt_91dd4d23425e",
+      "invoice_id": "inv_0012",
+      "error_code": "\u2014",
+      "action_taken": "RECOVERED",
+      "state_transition": "\u2192 RECOVERED",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.924782"
+    },
+    {
+      "trace_id": "evt_cb9fa45d676b",
+      "invoice_id": "inv_0013",
+      "error_code": "\u2014",
+      "action_taken": "WEBHOOK_RECEIVED",
+      "state_transition": "\u2192 GATEWAY_FAILURE",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.924782"
+    },
+    {
+      "trace_id": "evt_02e8507330da",
+      "invoice_id": "inv_0013",
+      "error_code": "\u2014",
+      "action_taken": "DIAGNOSED",
+      "state_transition": "\u2192 GATEWAY_FAILURE",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.935262"
+    },
+    {
+      "trace_id": "evt_79f98121122e",
+      "invoice_id": "inv_0013",
+      "error_code": "\u2014",
+      "action_taken": "RECOVERED",
+      "state_transition": "\u2192 RECOVERED",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.936511"
+    },
+    {
+      "trace_id": "evt_3041dd4c16ca",
+      "invoice_id": "inv_0014",
+      "error_code": "\u2014",
+      "action_taken": "WEBHOOK_RECEIVED",
+      "state_transition": "\u2192 GATEWAY_FAILURE",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.938169"
+    },
+    {
+      "trace_id": "evt_3b8184866e40",
+      "invoice_id": "inv_0014",
+      "error_code": "\u2014",
+      "action_taken": "DIAGNOSED",
+      "state_transition": "\u2192 GATEWAY_FAILURE",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.938169"
+    },
+    {
+      "trace_id": "evt_4e927b6d58cd",
+      "invoice_id": "inv_0014",
+      "error_code": "\u2014",
+      "action_taken": "RECOVERED",
+      "state_transition": "\u2192 RECOVERED",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.942712"
+    },
+    {
+      "trace_id": "evt_cf439d8b3472",
+      "invoice_id": "inv_0015",
+      "error_code": "\u2014",
+      "action_taken": "WEBHOOK_RECEIVED",
+      "state_transition": "\u2192 GATEWAY_FAILURE",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.945562"
+    },
+    {
+      "trace_id": "evt_c42189729899",
+      "invoice_id": "inv_0015",
+      "error_code": "\u2014",
+      "action_taken": "DIAGNOSED",
+      "state_transition": "\u2192 GATEWAY_FAILURE",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.945562"
+    },
+    {
+      "trace_id": "evt_6c4c918d0e62",
+      "invoice_id": "inv_0015",
+      "error_code": "\u2014",
+      "action_taken": "RECOVERED",
+      "state_transition": "\u2192 RECOVERED",
+      "sha256_hash": null,
+      "timestamp": "2026-09-04T08:53:20.945562"
+    }
+  ],
+  "roadmap_notes": [
+    "This benchmark runs every payment through the real Day1_diagnostic + Day2_statemachine + Day2_audit code path via Day4_engine_runner.py, against an in-memory SQLite DB - no live gateway calls.",
+    "Day2_integration.py and Day3_integration.py are the live-webhook path (Razorpay API, Redis, Postgres) and are not exercised by this benchmark; their bugs were fixed for repo/demo correctness but are not on the critical path to these numbers.",
+    "The only simulated step is whether a given retry or fallback-link attempt succeeds, since there's no live gateway in a benchmark - that roll is weighted by the real recovery_score Day 1 assigns.",
+    "Production roadmap: Account Aggregator (AA) consent-based bank data + a 24-hour pre-debit notification pre-flight check, ahead of the reactive dunning pipeline (see the Block 6 tab in the dashboard for the full architecture)."
+  ],
+  "analysis": {
+    "pass_fail_criteria": {
+      "70_percent_recovery_rate": true,
+      "70_percent_revenue_recovery": true,
+      "block_1_80_percent": true,
+      "overall_status": "\u2713 PASSED - All Criteria Met"
+    },
+    "strengths": [
+      "\u2713 BLOCK_1 (Network errors) recovery > 80%",
+      "\u2713 Overall recovery rate > 75%",
+      "\u2713 Revenue recovery > 75%",
+      "\u2713 BLOCK_3 (Dead instruments) - 100% of card retries correctly suppressed and routed straight to fallback",
+      "\u2713 BLOCK_4 fallback-link conversion 78.9% meets target (65.0%)"
+    ],
+    "weaknesses": [
+      "No significant weaknesses identified"
+    ],
+    "recommendations": [
+      "Continue monitoring and optimize as needed"
+    ]
+  }
+}
